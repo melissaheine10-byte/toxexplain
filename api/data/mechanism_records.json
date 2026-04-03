@@ -2,13 +2,26 @@
   {
     "drug_name": "Troglitazone",
     "smiles": "CC(C)c1ccc(cc1)C(=O)Nc2cccc(c2)O",
-    "primary_targets": ["PPAR-gamma", "CYP2C8"],
-    "off_targets": ["mitochondrial complex I"],
-    "pathways": ["oxidative stress", "hepatocyte apoptosis"],
-    "organ_systems": ["liver"],
+    "primary_targets": [
+      "PPAR-gamma",
+      "CYP2C8"
+    ],
+    "off_targets": [
+      "mitochondrial complex I"
+    ],
+    "pathways": [
+      "oxidative stress",
+      "hepatocyte apoptosis"
+    ],
+    "organ_systems": [
+      "liver"
+    ],
     "withdrawal_reason": "Severe hepatotoxicity leading to liver failure",
     "source": "Group A",
-    "references": ["PMID:12345678", "PMID:23456789"],
+    "references": [
+      "PMID:12345678",
+      "PMID:23456789"
+    ],
     "evidence_items": [
       {
         "label": "Mitochondrial dysfunction observed in hepatocytes",
@@ -29,13 +42,24 @@
   {
     "drug_name": "Rofecoxib",
     "smiles": "CS(=O)(=O)c1ccc(cc1)C2=C(C(=O)OC2)c3ccccc3",
-    "primary_targets": ["COX-2"],
-    "off_targets": ["prostacyclin synthase"],
-    "pathways": ["prostacyclin suppression", "platelet aggregation"],
-    "organ_systems": ["cardiovascular"],
+    "primary_targets": [
+      "COX-2"
+    ],
+    "off_targets": [
+      "prostacyclin synthase"
+    ],
+    "pathways": [
+      "prostacyclin suppression",
+      "platelet aggregation"
+    ],
+    "organ_systems": [
+      "cardiovascular"
+    ],
     "withdrawal_reason": "Increased risk of myocardial infarction and stroke",
     "source": "Group B",
-    "references": ["PMID:34567890"],
+    "references": [
+      "PMID:34567890"
+    ],
     "evidence_items": [
       {
         "label": "COX-2 selective inhibition shifts prostacyclin/thromboxane balance",
@@ -54,21 +78,963 @@
     ]
   },
   {
-    "drug_name": "Phenacetin",
-    "smiles": "CCOc1ccc(NC(C)=O)cc1",
-    "primary_targets": ["COX-1", "COX-2"],
-    "off_targets": ["CYP1A2"],
-    "pathways": ["oxidative nephropathy", "reactive metabolite formation"],
-    "organ_systems": ["kidney"],
-    "withdrawal_reason": "Analgesic nephropathy and renal papillary necrosis",
-    "source": "Group A",
-    "references": ["PMID:45678901"],
+    "drug_name": "Terfenadine",
+    "drug_id": "DB00342",
+    "smiles": "CC(C)(C)C1=CC=C(C=C1)C(O)CCCN1CCC(CC1)C(O)(C1=CC=CC=C1)C1=CC=CC=C1",
+    "primary_targets": [
+      "Histamine H1 receptor"
+    ],
+    "off_targets": [
+      "Voltage-gated inwardly rectifying potassium channel KCNH2",
+      "Cytochrome P450 3A4"
+    ],
+    "pathways": [
+      "hERG channel blockade"
+    ],
+    "organ_systems": [
+      "cardiac",
+      "hepatic",
+      "neurologic"
+    ],
+    "withdrawal_reason": "Withdrawn due to QT prolongation and serious ventricular arrhythmias.",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB00342"
+    ],
     "evidence_items": [
       {
-        "label": "Chronic use causes renal papillary necrosis",
-        "source": "PMID:45678901",
-        "origin": "epidemiological study",
-        "group": "A",
+        "label": "Histamine H1 receptor \u2014 antagonist (primary)",
+        "source": "DrugBank: DB00342",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Voltage-gated inwardly rectifying potassium channel KCNH2 \u2014 inhibits (off_target)",
+        "source": "DrugBank: DB00342",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Cytochrome P450 3A4 \u2014 inhibits (off_target)",
+        "source": "DrugBank: DB00342",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "hERG channel blockade",
+        "source": "DrugBank: DB00342",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "QT interval prolongation \u2014 cardiac (severe)",
+        "source": "DrugBank: DB00342",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Torsades de pointes \u2014 cardiac (fatal)",
+        "source": "DrugBank: DB00342",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Headache \u2014 neurologic (mild)",
+        "source": "DrugBank: DB00342",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "CYP3A4 inhibition \u2014 increases risk",
+        "source": "DrugBank: DB00342",
+        "origin": "risk modifier analysis",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Phenacetin",
+    "drug_id": "DB03783",
+    "smiles": "CCOC1=CC=C(NC(C)=O)C=C1",
+    "primary_targets": [
+      "Prostaglandin G/H synthase 1"
+    ],
+    "off_targets": [
+      "Inosine-5'-monophosphate dehydrogenase 1",
+      "Solute carrier family 22 member 6"
+    ],
+    "pathways": [
+      "Cardiac negative inotropy"
+    ],
+    "organ_systems": [
+      "cardiac",
+      "renal"
+    ],
+    "withdrawal_reason": "withdrawn due to analgesic nephropathy and urothelial carcinoma",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB03783"
+    ],
+    "evidence_items": [
+      {
+        "label": "Prostaglandin G/H synthase 1 \u2014 inhibits (primary)",
+        "source": "DrugBank: DB03783",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Inosine-5'-monophosphate dehydrogenase 1 \u2014 inhibits (secondary)",
+        "source": "DrugBank: DB03783",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Solute carrier family 22 member 6 \u2014 inhibits (off_target)",
+        "source": "DrugBank: DB03783",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Cardiac negative inotropy",
+        "source": "DrugBank: DB03783",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "nephropathy \u2014 renal (severe)",
+        "source": "DrugBank: DB03783",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Enflurane",
+    "drug_id": "DB00228",
+    "smiles": "FC(F)OC(F)(F)C(F)Cl",
+    "primary_targets": [
+      "GABA(A) Receptor",
+      "Glycine receptor subunit alpha-1",
+      "Voltage-dependent calcium channel"
+    ],
+    "off_targets": [
+      "Cytochrome P450 2E1"
+    ],
+    "pathways": [
+      "Cardiac sarcoplasmic reticulum calcium channel inhibition",
+      "CNS depression via GABA/Glycine receptors"
+    ],
+    "organ_systems": [
+      "cardiac",
+      "hepatic",
+      "neurologic",
+      "reproductive"
+    ],
+    "withdrawal_reason": "No specific withdrawal reason; induces seizures and linked to nephotoxicity",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB00228"
+    ],
+    "evidence_items": [
+      {
+        "label": "GABA(A) Receptor \u2014 modulates (primary)",
+        "source": "DrugBank: DB00228",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Glycine receptor subunit alpha-1 \u2014 modulates (primary)",
+        "source": "DrugBank: DB00228",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Voltage-dependent calcium channel \u2014 binds (primary)",
+        "source": "DrugBank: DB00228",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Cytochrome P450 2E1 \u2014 binds (off_target)",
+        "source": "DrugBank: DB00228",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Cardiac sarcoplasmic reticulum calcium channel inhibition",
+        "source": "DrugBank: DB00228",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "CNS depression via GABA/Glycine receptors",
+        "source": "DrugBank: DB00228",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Seizures \u2014 neurologic (moderate)",
+        "source": "DrugBank: DB00228",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Cardio depressant effects \u2014 cardiac (moderate)",
+        "source": "DrugBank: DB00228",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Hepatotoxicity \u2014 hepatic (moderate)",
+        "source": "DrugBank: DB00228",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Malignant hyperthermia \u2014 other (severe)",
+        "source": "DrugBank: DB00228",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Uterine bleeding \u2014 reproductive (moderate)",
+        "source": "DrugBank: DB00228",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "High concentration \u2014 increases risk",
+        "source": "DrugBank: DB00228",
+        "origin": "risk modifier analysis",
+        "group": "B",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "drug_name": "Amsacrine",
+    "drug_id": "DB00276",
+    "smiles": "COC1=C(NC2=C3C=CC=CC3=NC3=CC=CC=C23)C=CC(NS(C)(=O)=O)=C1",
+    "primary_targets": [
+      "DNA",
+      "DNA topoisomerase 2-alpha"
+    ],
+    "off_targets": [
+      "DNA topoisomerase 2-beta",
+      "Voltage-gated inwardly rectifying potassium channel KCNH2",
+      "ATP-dependent translocase ABCB1"
+    ],
+    "pathways": [
+      "DNA double-strand breaks",
+      "hERG channel blockade"
+    ],
+    "organ_systems": [
+      "cardiac",
+      "gastrointestinal",
+      "hematologic"
+    ],
+    "withdrawal_reason": "Not specified",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB00276"
+    ],
+    "evidence_items": [
+      {
+        "label": "DNA \u2014 intercalates (primary)",
+        "source": "DrugBank: DB00276",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "DNA topoisomerase 2-alpha \u2014 inhibits (primary)",
+        "source": "DrugBank: DB00276",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "DNA topoisomerase 2-beta \u2014 inhibits (off_target)",
+        "source": "DrugBank: DB00276",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Voltage-gated inwardly rectifying potassium channel KCNH2 \u2014 inhibits (off_target)",
+        "source": "DrugBank: DB00276",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "ATP-dependent translocase ABCB1 \u2014 inhibits (secondary)",
+        "source": "DrugBank: DB00276",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "DNA double-strand breaks",
+        "source": "DrugBank: DB00276",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "hERG channel blockade",
+        "source": "DrugBank: DB00276",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "myelosuppression \u2014 hematologic (moderate)",
+        "source": "DrugBank: DB00276",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "cardiotoxicity \u2014 cardiac (moderate)",
+        "source": "DrugBank: DB00276",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "nausea and vomiting \u2014 gastrointestinal (mild)",
+        "source": "DrugBank: DB00276",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "diarrhea \u2014 gastrointestinal (mild)",
+        "source": "DrugBank: DB00276",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Lindane",
+    "drug_id": "DB00431",
+    "smiles": "Cl[C@H]1[C@H](Cl)[C@@H](Cl)[C@@H](Cl)[C@H](Cl)[C@H]1Cl",
+    "primary_targets": [
+      "Gamma-aminobutyric acid receptor subunit beta-1"
+    ],
+    "off_targets": [
+      "Glycine receptor subunit alpha-1",
+      "Progesterone receptor",
+      "Nuclear receptor subfamily 1 group I member 2"
+    ],
+    "pathways": [
+      "GABA-gated chloride channel blockade"
+    ],
+    "organ_systems": [
+      "hematologic",
+      "hepatic",
+      "neurologic",
+      "reproductive"
+    ],
+    "withdrawal_reason": "Neurotoxicity and adverse environmental effects; additionally associated with resistance and bone marrow suppression, leading to withdrawal/restriction in many countries and second-line-only use in some settings.",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB00431"
+    ],
+    "evidence_items": [
+      {
+        "label": "Gamma-aminobutyric acid receptor subunit beta-1 \u2014 antagonist (primary)",
+        "source": "DrugBank: DB00431",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Glycine receptor subunit alpha-1 \u2014 antagonist (off_target)",
+        "source": "DrugBank: DB00431",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Progesterone receptor \u2014 antagonist (off_target)",
+        "source": "DrugBank: DB00431",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Nuclear receptor subfamily 1 group I member 2 \u2014 activates (secondary)",
+        "source": "DrugBank: DB00431",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "GABA-gated chloride channel blockade",
+        "source": "DrugBank: DB00431",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Neurotoxicity \u2014 neurologic (severe)",
+        "source": "DrugBank: DB00431",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Bone marrow suppression \u2014 hematologic (severe)",
+        "source": "DrugBank: DB00431",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Oral exposure \u2014 increases risk",
+        "source": "DrugBank: DB00431",
+        "origin": "risk modifier analysis",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Tegaserod",
+    "drug_id": "DB01079",
+    "smiles": "CCCCCNC(=N)N\\N=C\\C1=CNC2=C1C=C(OC)C=C2",
+    "primary_targets": [
+      "5-hydroxytryptamine receptor 4"
+    ],
+    "off_targets": [
+      "5-hydroxytryptamine receptor 2B",
+      "Cytochrome P450 1A2"
+    ],
+    "pathways": [
+      "5-HT4 receptor activation",
+      "Platelet aggregation"
+    ],
+    "organ_systems": [
+      "cardiac",
+      "gastrointestinal",
+      "hematologic",
+      "hepatic"
+    ],
+    "withdrawal_reason": "withdrawn in 2007 for cardiovascular ischemic events but re-approved in 2019 for women <65 without CV history.",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB01079"
+    ],
+    "evidence_items": [
+      {
+        "label": "5-hydroxytryptamine receptor 4 \u2014 activates (primary)",
+        "source": "DrugBank: DB01079",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "5-hydroxytryptamine receptor 2B \u2014 antagonist (off_target)",
+        "source": "DrugBank: DB01079",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Cytochrome P450 1A2 \u2014 inhibits (off_target)",
+        "source": "DrugBank: DB01079",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "5-HT4 receptor activation",
+        "source": "DrugBank: DB01079",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Platelet aggregation",
+        "source": "DrugBank: DB01079",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Diarrhea \u2014 gastrointestinal (mild)",
+        "source": "DrugBank: DB01079",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Cardiovascular events \u2014 cardiac (severe)",
+        "source": "DrugBank: DB01079",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Age (65+) \u2014 increases risk",
+        "source": "DrugBank: DB01079",
+        "origin": "risk modifier analysis",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Kanamycin",
+    "drug_id": "DB01172",
+    "smiles": "NC[C@H]1O[C@H](O[C@@H]2[C@@H](N)C[C@@H](N)[C@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H]2O)[C@H](O)[C@@H](O)[C@@H]1O",
+    "primary_targets": [
+      "Small ribosomal subunit protein uS12",
+      "16S ribosomal RNA"
+    ],
+    "off_targets": [
+      "Aminoglycoside 2'-N-acetyltransferase"
+    ],
+    "pathways": [
+      "Nephrotoxicity",
+      "Ototoxicity"
+    ],
+    "organ_systems": [
+      "neurologic",
+      "renal"
+    ],
+    "withdrawal_reason": "Not clearly establish a definitive safety-only regulatory withdrawal reason; severe ototoxicity and nephrotoxicity are major known toxicities.",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB01172"
+    ],
+    "evidence_items": [
+      {
+        "label": "Small ribosomal subunit protein uS12 \u2014 inhibits (primary)",
+        "source": "DrugBank: DB01172",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "16S ribosomal RNA \u2014 inhibits (primary)",
+        "source": "DrugBank: DB01172",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Aminoglycoside 2'-N-acetyltransferase \u2014 binds (secondary)",
+        "source": "DrugBank: DB01172",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Nephrotoxicity",
+        "source": "DrugBank: DB01172",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Ototoxicity",
+        "source": "DrugBank: DB01172",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "nephrotoxicity \u2014 renal (mild)",
+        "source": "DrugBank: DB01172",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "ototoxicity \u2014 neurologic (severe)",
+        "source": "DrugBank: DB01172",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "cumulative lifetime exposure \u2014 increases risk",
+        "source": "DrugBank: DB01172",
+        "origin": "risk modifier analysis",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Ximelagatran",
+    "drug_id": "DB04898",
+    "smiles": "CCOC(=O)CN[C@@H](C(=O)N1CC[C@H]1C(=O)NCC1=CC=C(C=C1)C(\\N)=N\\O)C1CCCCC1",
+    "primary_targets": [
+      "Prothrombin"
+    ],
+    "off_targets": [
+      "Cytochrome P450 2C9"
+    ],
+    "pathways": [
+      "Thrombin inhibition"
+    ],
+    "organ_systems": [
+      "hematologic",
+      "hepatic"
+    ],
+    "withdrawal_reason": "withdrawn due to hepatotoxicity reports during trials",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB04898"
+    ],
+    "evidence_items": [
+      {
+        "label": "Prothrombin \u2014 inhibits (primary)",
+        "source": "DrugBank: DB04898",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Cytochrome P450 2C9 \u2014 binds (secondary)",
+        "source": "DrugBank: DB04898",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Thrombin inhibition",
+        "source": "DrugBank: DB04898",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Hepatotoxicity \u2014 hepatic (severe)",
+        "source": "DrugBank: DB04898",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Droxicam",
+    "drug_id": "DB09215",
+    "smiles": "CN1C2=C(OC(=O)N(C2=O)C2=CC=CC=N2)C2=CC=CC=C2S1(=O)=O",
+    "primary_targets": [
+      "Prostaglandin G/H synthase 1",
+      "Prostaglandin G/H synthase 2"
+    ],
+    "off_targets": [],
+    "pathways": [
+      "Prostaglandin synthesis inhibition"
+    ],
+    "organ_systems": [
+      "hepatic"
+    ],
+    "withdrawal_reason": "Withdrawn due to significantly increased risk of hepatic toxicity",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB09215"
+    ],
+    "evidence_items": [
+      {
+        "label": "Prostaglandin G/H synthase 1 \u2014 inhibits (primary)",
+        "source": "DrugBank: DB09215",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Prostaglandin G/H synthase 2 \u2014 inhibits (primary)",
+        "source": "DrugBank: DB09215",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Prostaglandin synthesis inhibition",
+        "source": "DrugBank: DB09215",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "hepatic toxicity \u2014 hepatic (severe)",
+        "source": "DrugBank: DB09215",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Propiolactone",
+    "drug_id": "DB09348",
+    "smiles": "O=C1CCO1",
+    "primary_targets": [
+      "DNA"
+    ],
+    "off_targets": [
+      "Albumin"
+    ],
+    "pathways": [
+      "Alkylation"
+    ],
+    "organ_systems": [],
+    "withdrawal_reason": "Human carcinogenicity, leading to discontinuation/withdrawal from medical procedures and food-related uses",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB09348"
+    ],
+    "evidence_items": [
+      {
+        "label": "DNA \u2014 binds (primary)",
+        "source": "DrugBank: DB09348",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Albumin \u2014 binds (off_target)",
+        "source": "DrugBank: DB09348",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Alkylation",
+        "source": "DrugBank: DB09348",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Carcinogenicity \u2014 other (severe)",
+        "source": "DrugBank: DB09348",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Mutagenicity \u2014 other (severe)",
+        "source": "DrugBank: DB09348",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "drug_name": "Parachlorophenol",
+    "drug_id": "DB13154",
+    "smiles": "OC1=CC=C(Cl)C=C1",
+    "primary_targets": [],
+    "off_targets": [
+      "Sodium channel protein type 4 subunit alpha",
+      "Solute carrier organic anion transporter family member 1B3"
+    ],
+    "pathways": [
+      "uncoupling of oxidative phosphorylation"
+    ],
+    "organ_systems": [
+      "dermatologic",
+      "hepatic",
+      "neurologic"
+    ],
+    "withdrawal_reason": "Not specified",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB13154"
+    ],
+    "evidence_items": [
+      {
+        "label": "Sodium channel protein type 4 subunit alpha \u2014 unknown (off_target)",
+        "source": "DrugBank: DB13154",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "low"
+      },
+      {
+        "label": "Solute carrier organic anion transporter family member 1B3 \u2014 binds (off_target)",
+        "source": "DrugBank: DB13154",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "uncoupling of oxidative phosphorylation",
+        "source": "DrugBank: DB13154",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "skin and mucous membrane irritation/cauterization \u2014 dermatologic (moderate)",
+        "source": "DrugBank: DB13154",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "organ damage (liver, brain, gastrointestinal, respiratory, CNS) \u2014 other (severe)",
+        "source": "DrugBank: DB13154",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "drug_name": "Acetarsol",
+    "drug_id": "DB13268",
+    "smiles": "CC(=O)NC1=CC(=CC=C1O)[As](O)(O)=O",
+    "primary_targets": [],
+    "off_targets": [],
+    "pathways": [
+      "Sulfhydryl binding"
+    ],
+    "organ_systems": [
+      "neurologic"
+    ],
+    "withdrawal_reason": "Not specified",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB13268"
+    ],
+    "evidence_items": [
+      {
+        "label": "Sulfhydryl binding",
+        "source": "DrugBank: DB13268",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Optic neuritis \u2014 neurologic (moderate)",
+        "source": "DrugBank: DB13268",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Optic atrophy \u2014 neurologic (severe)",
+        "source": "DrugBank: DB13268",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Carcinogenicity \u2014 other (severe)",
+        "source": "DrugBank: DB13268",
+        "origin": "adverse event report",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Systemic absorption \u2014 increases risk",
+        "source": "DrugBank: DB13268",
+        "origin": "risk modifier analysis",
+        "group": "B",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "drug_name": "Bendazac",
+    "drug_id": "DB13501",
+    "smiles": "OC(=O)COC1=NN(CC2=CC=CC=C2)C2=CC=CC=C12",
+    "primary_targets": [
+      "Prostaglandin G/H synthase 1",
+      "Prostaglandin G/H synthase 2"
+    ],
+    "off_targets": [
+      "Free radicals"
+    ],
+    "pathways": [
+      "Protein anti-denaturation",
+      "Prostaglandin synthesis inhibition"
+    ],
+    "organ_systems": [
+      "hepatic"
+    ],
+    "withdrawal_reason": "Withdrawn due to concerns for heptatotoxicity",
+    "source": "Group B",
+    "references": [
+      "DrugBank: DB13501"
+    ],
+    "evidence_items": [
+      {
+        "label": "Free radicals \u2014 blocks (off_target)",
+        "source": "DrugBank: DB13501",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "medium"
+      },
+      {
+        "label": "Prostaglandin G/H synthase 1 \u2014 inhibits (primary)",
+        "source": "DrugBank: DB13501",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Prostaglandin G/H synthase 2 \u2014 inhibits (primary)",
+        "source": "DrugBank: DB13501",
+        "origin": "target annotation",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Protein anti-denaturation",
+        "source": "DrugBank: DB13501",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Prostaglandin synthesis inhibition",
+        "source": "DrugBank: DB13501",
+        "origin": "mechanism extraction",
+        "group": "B",
+        "confidence": "high"
+      },
+      {
+        "label": "Hepatotoxicity \u2014 hepatic (severe)",
+        "source": "DrugBank: DB13501",
+        "origin": "adverse event report",
+        "group": "B",
         "confidence": "high"
       }
     ]

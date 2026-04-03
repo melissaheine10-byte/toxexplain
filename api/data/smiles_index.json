@@ -1,0 +1,98 @@
+{
+  "by_smiles": {
+    "CC(C)c1ccc(cc1)C(=O)Nc2cccc(c2)O": "troglitazone",
+    "CS(=O)(=O)c1ccc(cc1)C2=C(C(=O)OC2)c3ccccc3": "rofecoxib",
+    "CC(C)(C)C1=CC=C(C=C1)C(O)CCCN1CCC(CC1)C(O)(C1=CC=CC=C1)C1=CC=CC=C1": "DB00342",
+    "CCOC1=CC=C(NC(C)=O)C=C1": "DB03783",
+    "FC(F)OC(F)(F)C(F)Cl": "DB00228",
+    "COC1=C(NC2=C3C=CC=CC3=NC3=CC=CC=C23)C=CC(NS(C)(=O)=O)=C1": "DB00276",
+    "Cl[C@H]1[C@H](Cl)[C@@H](Cl)[C@@H](Cl)[C@H](Cl)[C@H]1Cl": "DB00431",
+    "CCCCCNC(=N)N\\N=C\\C1=CNC2=C1C=C(OC)C=C2": "DB01079",
+    "NC[C@H]1O[C@H](O[C@@H]2[C@@H](N)C[C@@H](N)[C@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H]2O)[C@H](O)[C@@H](O)[C@@H]1O": "DB01172",
+    "CCOC(=O)CN[C@@H](C(=O)N1CC[C@H]1C(=O)NCC1=CC=C(C=C1)C(\\N)=N\\O)C1CCCCC1": "DB04898",
+    "CN1C2=C(OC(=O)N(C2=O)C2=CC=CC=N2)C2=CC=CC=C2S1(=O)=O": "DB09215",
+    "O=C1CCO1": "DB09348",
+    "OC1=CC=C(Cl)C=C1": "DB13154",
+    "CC(=O)NC1=CC(=CC=C1O)[As](O)(O)=O": "DB13268",
+    "OC(=O)COC1=NN(CC2=CC=CC=C2)C2=CC=CC=C12": "DB13501"
+  },
+  "by_drug_id": {
+    "troglitazone": {
+      "drug_name": "Troglitazone",
+      "smiles": "CC(C)c1ccc(cc1)C(=O)Nc2cccc(c2)O"
+    },
+    "rofecoxib": {
+      "drug_name": "Rofecoxib",
+      "smiles": "CS(=O)(=O)c1ccc(cc1)C2=C(C(=O)OC2)c3ccccc3"
+    },
+    "DB00342": {
+      "drug_name": "Terfenadine",
+      "smiles": "CC(C)(C)C1=CC=C(C=C1)C(O)CCCN1CCC(CC1)C(O)(C1=CC=CC=C1)C1=CC=CC=C1"
+    },
+    "DB03783": {
+      "drug_name": "Phenacetin",
+      "smiles": "CCOC1=CC=C(NC(C)=O)C=C1"
+    },
+    "DB00228": {
+      "drug_name": "Enflurane",
+      "smiles": "FC(F)OC(F)(F)C(F)Cl"
+    },
+    "DB00276": {
+      "drug_name": "Amsacrine",
+      "smiles": "COC1=C(NC2=C3C=CC=CC3=NC3=CC=CC=C23)C=CC(NS(C)(=O)=O)=C1"
+    },
+    "DB00431": {
+      "drug_name": "Lindane",
+      "smiles": "Cl[C@H]1[C@H](Cl)[C@@H](Cl)[C@@H](Cl)[C@H](Cl)[C@H]1Cl"
+    },
+    "DB01079": {
+      "drug_name": "Tegaserod",
+      "smiles": "CCCCCNC(=N)N\\N=C\\C1=CNC2=C1C=C(OC)C=C2"
+    },
+    "DB01172": {
+      "drug_name": "Kanamycin",
+      "smiles": "NC[C@H]1O[C@H](O[C@@H]2[C@@H](N)C[C@@H](N)[C@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H]2O)[C@H](O)[C@@H](O)[C@@H]1O"
+    },
+    "DB04898": {
+      "drug_name": "Ximelagatran",
+      "smiles": "CCOC(=O)CN[C@@H](C(=O)N1CC[C@H]1C(=O)NCC1=CC=C(C=C1)C(\\N)=N\\O)C1CCCCC1"
+    },
+    "DB09215": {
+      "drug_name": "Droxicam",
+      "smiles": "CN1C2=C(OC(=O)N(C2=O)C2=CC=CC=N2)C2=CC=CC=C2S1(=O)=O"
+    },
+    "DB09348": {
+      "drug_name": "Propiolactone",
+      "smiles": "O=C1CCO1"
+    },
+    "DB13154": {
+      "drug_name": "Parachlorophenol",
+      "smiles": "OC1=CC=C(Cl)C=C1"
+    },
+    "DB13268": {
+      "drug_name": "Acetarsol",
+      "smiles": "CC(=O)NC1=CC(=CC=C1O)[As](O)(O)=O"
+    },
+    "DB13501": {
+      "drug_name": "Bendazac",
+      "smiles": "OC(=O)COC1=NN(CC2=CC=CC=C2)C2=CC=CC=C12"
+    }
+  },
+  "by_drug_name": {
+    "troglitazone": "troglitazone",
+    "rofecoxib": "rofecoxib",
+    "terfenadine": "DB00342",
+    "phenacetin": "DB03783",
+    "enflurane": "DB00228",
+    "amsacrine": "DB00276",
+    "lindane": "DB00431",
+    "tegaserod": "DB01079",
+    "kanamycin": "DB01172",
+    "ximelagatran": "DB04898",
+    "droxicam": "DB09215",
+    "propiolactone": "DB09348",
+    "parachlorophenol": "DB13154",
+    "acetarsol": "DB13268",
+    "bendazac": "DB13501"
+  }
+}
