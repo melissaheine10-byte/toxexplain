@@ -7,6 +7,7 @@ Endpoints:
 """
 
 from fastapi import APIRouter, HTTPException, Query
+
 from api.models import ResultsPageData
 from api.services.orchestrator import build_results_page_data
 
@@ -28,9 +29,7 @@ async def get_results(
         examples=["CC(=O)Oc1ccccc1C(=O)O"],
     ),
 ):
-    """
-    Return a full explainability result for the given SMILES string.
-    """
+    """Return a full explainability result for the given SMILES string."""
     if not smiles.strip():
         raise HTTPException(status_code=400, detail="SMILES string cannot be empty")
 
@@ -38,10 +37,6 @@ async def get_results(
         result = await build_results_page_data(smiles)
         return result.model_dump(by_alias=True)
     except RuntimeError as e:
-        # External service / parsing / ProTox-specific failure
         raise HTTPException(status_code=502, detail=str(e))
-    except Exception:
-        raise HTTPException(
-            status_code=500,
-            detail="Unexpected server error while generating results",
-        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"{type(e).__name__}: {e}")

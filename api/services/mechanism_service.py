@@ -10,7 +10,6 @@ import json
 from pathlib import Path
 from api.models import MechanismRecord, EvidenceItem
 
-
 _DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 _DATA_FILE = _DATA_DIR / "mechanism_records.json"
 _INDEX_FILE = _DATA_DIR / "smiles_index.json"
@@ -60,6 +59,7 @@ def _find_matching_entries(smiles: str, raw_data: list[dict]) -> list[dict]:
     # 3. Try canonical SMILES matching via RDKit
     try:
         from rdkit import Chem
+
         query_mol = Chem.MolFromSmiles(smiles)
         if query_mol:
             query_canonical = Chem.MolToSmiles(query_mol)
@@ -91,22 +91,20 @@ async def lookup_mechanisms(
 ) -> tuple[list[MechanismRecord], list[EvidenceItem]]:
     """
     Look up curated mechanism records that match the given SMILES string.
+
     Tries in order:
       1. Exact SMILES match against records
       2. SMILES index lookup (by drug_id)
       3. Canonical SMILES match via RDKit (if installed)
+
     Returns empty lists if no match is found.
-
-
-    Returns:
-        A tuple of (mechanism_records, evidence_items).
     """
     raw_data = _load_data()
-
     matched = _find_matching_entries(smiles, raw_data)
 
     mechanism_records: list[MechanismRecord] = []
     evidence_items: list[EvidenceItem] = []
+
     for entry in matched:
         # Pop evidence_items from a copy so we don't mutate the cache
         entry_copy = dict(entry)
@@ -142,10 +140,11 @@ def get_all_drug_names() -> list[dict]:
     index = _load_index()
     drugs = []
     for drug_id, info in index.get("by_drug_id", {}).items():
-        drugs.append({
-            "drug_id": drug_id,
-            "drug_name": info["drug_name"],
-            "smiles": info["smiles"],
-        })
+        drugs.append(
+            {
+                "drug_id": drug_id,
+                "drug_name": info["drug_name"],
+                "smiles": info["smiles"],
+            }
+        )
     return sorted(drugs, key=lambda x: x["drug_name"])
-
